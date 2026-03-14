@@ -290,7 +290,7 @@ function App() {
         </div>
       </header>
       <AgentBar />
-      <div className="flex flex-1 overflow-hidden flex-col md:flex-row">
+      <div className="flex flex-1 overflow-hidden flex-col md:flex-row min-h-0">
         {/* Sidebar - hidden on mobile when viewing detail */}
         <div className={`${selected && !showList ? 'hidden' : 'flex'} md:flex flex-col`}>
           <TaskList tasks={tasks} selectedId={selectedId} onSelect={(id) => { setSelectedId(id); setShowList(false); }} onClose={selected ? () => setShowList(false) : null} />
@@ -299,12 +299,12 @@ function App() {
         {/* Detail - hidden on mobile when viewing list */}
         <div className={`${!selected || showList ? 'hidden' : 'flex'} md:flex flex-1 overflow-hidden`}>
           {selected && (
-            <div className="w-full flex flex-col">
+            <div className="w-full flex flex-col min-h-0">
               {/* Mobile back button */}
               <div className="md:hidden p-2 bg-slate-800/50 border-b border-slate-700 flex-shrink-0">
                 <button onClick={() => setShowList(true)} className="text-sm text-blue-400 hover:text-blue-300">← 返回列表</button>
               </div>
-              <div className="flex-1 overflow-hidden">
+              <div className="flex-1 min-h-0">
                 <TaskDetail task={selected} />
               </div>
             </div>
