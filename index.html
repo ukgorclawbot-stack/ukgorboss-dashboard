@@ -43,11 +43,11 @@ const AGENTS = [
 ];
 
 const STEP_TYPES = {
-  thinking: { label: '思考', color: 'purple', bg: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500' },
-  tool: { label: '工具调用', color: 'blue', bg: 'bg-blue-500/10', text: 'text-blue-400', border: 'border-blue-500' },
-  response: { label: '响应', color: 'green', bg: 'bg-green-500/10', text: 'text-green-400', border: 'border-green-500' },
-  error: { label: '错误', color: 'red', bg: 'bg-red-500/10', text: 'text-red-400', border: 'border-red-500' },
-  coordination: { label: '协调', color: 'yellow', bg: 'bg-yellow-500/10', text: 'text-yellow-400', border: 'border-yellow-500' },
+  thinking: { label: '思考', color: 'purple', hex: '#a855f7', bg: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500' },
+  tool: { label: '工具调用', color: 'blue', hex: '#3b82f6', bg: 'bg-blue-500/10', text: 'text-blue-400', border: 'border-blue-500' },
+  response: { label: '响应', color: 'green', hex: '#22c55e', bg: 'bg-green-500/10', text: 'text-green-400', border: 'border-green-500' },
+  error: { label: '错误', color: 'red', hex: '#ef4444', bg: 'bg-red-500/10', text: 'text-red-400', border: 'border-red-500' },
+  coordination: { label: '协调', color: 'yellow', hex: '#eab308', bg: 'bg-yellow-500/10', text: 'text-yellow-400', border: 'border-yellow-500' },
 };
 
 const DEMO_TASKS = [
@@ -132,7 +132,7 @@ function TaskList({ tasks, selectedId, onSelect, onClose }) {
   const statusLabel = { completed: '已完成', 'in-progress': '进行中', pending: '等待中' };
   const statusColor = { completed: 'text-green-400', 'in-progress': 'text-yellow-400', pending: 'text-slate-400' };
   return (
-    <div className="w-full md:w-80 bg-slate-800/30 border-r border-slate-700 overflow-y-auto flex-shrink-0">
+    <div className="w-full bg-slate-800/30 border-r border-slate-700 overflow-y-auto flex-1 min-h-0">
       <div className="p-3 border-b border-slate-700 flex items-center justify-between">
         <h2 className="text-sm font-semibold text-slate-300">📋 任务列表</h2>
         {onClose && <button onClick={onClose} className="md:hidden text-slate-400 hover:text-white text-lg">✕</button>}
@@ -159,7 +159,7 @@ function StepCard({ step, index }) {
   return (
     <div className={`step-card step-${step.type} ml-4 pl-4 py-3 relative`}>
       <div className="absolute left-[-8px] top-4 w-3 h-3 rounded-full bg-slate-600 border-2 border-slate-900"
-        style={{ borderColor: STEP_TYPES[step.type]?.border?.replace('border-','') || '#475569' }}></div>
+        style={{ borderColor: STEP_TYPES[step.type]?.hex || '#475569' }}></div>
       <div className="flex items-center gap-2 mb-1">
         <span className="text-lg">{agent.emoji}</span>
         <span className="text-sm font-medium text-white">{agent.name}</span>
@@ -222,7 +222,7 @@ function AddTaskForm({ onAdd }) {
     setText('');
   };
   return (
-    <form onSubmit={handleSubmit} className="p-3 border-t border-slate-700 bg-slate-800/30">
+    <form onSubmit={handleSubmit} className="p-3 border-t border-slate-700 bg-slate-800/30 flex-shrink-0">
       <div className="flex gap-2">
         <input value={text} onChange={e => setText(e.target.value)} placeholder="输入新任务..."
           className="flex-1 px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" />
@@ -292,21 +292,19 @@ function App() {
       <AgentBar />
       <div className="flex flex-1 overflow-hidden flex-col md:flex-row min-h-0">
         {/* Sidebar - hidden on mobile when viewing detail */}
-        <div className={`${selected && !showList ? 'hidden' : 'flex'} md:flex flex-col`}>
+        <div className={`${selected && !showList ? 'hidden' : 'flex'} md:flex flex-col flex-1 md:flex-none md:w-80 min-h-0`}>
           <TaskList tasks={tasks} selectedId={selectedId} onSelect={(id) => { setSelectedId(id); setShowList(false); }} onClose={selected ? () => setShowList(false) : null} />
           <AddTaskForm onAdd={(task) => { addTask(task); setShowList(false); }} />
         </div>
         {/* Detail - hidden on mobile when viewing list */}
-        <div className={`${!selected || showList ? 'hidden' : 'flex'} md:flex flex-1 overflow-hidden`}>
+        <div className={`${!selected || showList ? 'hidden' : 'flex'} md:flex flex-col flex-1 min-h-0`}>
           {selected && (
-            <div className="w-full flex flex-col min-h-0">
+            <div className="w-full flex flex-col min-h-0 flex-1">
               {/* Mobile back button */}
               <div className="md:hidden p-2 bg-slate-800/50 border-b border-slate-700 flex-shrink-0">
                 <button onClick={() => setShowList(true)} className="text-sm text-blue-400 hover:text-blue-300">← 返回列表</button>
               </div>
-              <div className="flex-1 min-h-0">
-                <TaskDetail task={selected} />
-              </div>
+              <TaskDetail task={selected} />
             </div>
           )}
           {!selected && <TaskDetail task={null} />}
