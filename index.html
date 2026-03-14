@@ -291,24 +291,25 @@ function App() {
       </header>
       <AgentBar />
       <div className="flex flex-1 overflow-hidden flex-col md:flex-row">
-        {/* Mobile: show list OR detail; Desktop: show both */}
-        <div className={`${selected && !showList ? 'hidden md:flex' : 'flex'} flex-col md:flex-row flex-1 overflow-hidden`}>
-          <div className={`${selected && !showList ? 'hidden md:flex' : 'flex'} flex-col`}>
-            <TaskList tasks={tasks} selectedId={selectedId} onSelect={(id) => { setSelectedId(id); setShowList(false); }} onClose={selected ? () => setShowList(false) : null} />
-            <AddTaskForm onAdd={(task) => { addTask(task); setShowList(false); }} />
-          </div>
-          <div className={`${!selected ? 'hidden md:flex' : 'flex'} flex-1 overflow-hidden`}>
-            {selected && (
-              <div className="w-full">
-                {/* Mobile back button */}
-                <div className="md:hidden p-2 bg-slate-800/50 border-b border-slate-700">
-                  <button onClick={() => setShowList(true)} className="text-sm text-blue-400 hover:text-blue-300">← 返回列表</button>
-                </div>
+        {/* Sidebar - hidden on mobile when viewing detail */}
+        <div className={`${selected && !showList ? 'hidden' : 'flex'} md:flex flex-col`}>
+          <TaskList tasks={tasks} selectedId={selectedId} onSelect={(id) => { setSelectedId(id); setShowList(false); }} onClose={selected ? () => setShowList(false) : null} />
+          <AddTaskForm onAdd={(task) => { addTask(task); setShowList(false); }} />
+        </div>
+        {/* Detail - hidden on mobile when viewing list */}
+        <div className={`${!selected || showList ? 'hidden' : 'flex'} md:flex flex-1 overflow-hidden`}>
+          {selected && (
+            <div className="w-full flex flex-col">
+              {/* Mobile back button */}
+              <div className="md:hidden p-2 bg-slate-800/50 border-b border-slate-700 flex-shrink-0">
+                <button onClick={() => setShowList(true)} className="text-sm text-blue-400 hover:text-blue-300">← 返回列表</button>
+              </div>
+              <div className="flex-1 overflow-hidden">
                 <TaskDetail task={selected} />
               </div>
-            )}
-            {!selected && <TaskDetail task={null} />}
-          </div>
+            </div>
+          )}
+          {!selected && <TaskDetail task={null} />}
         </div>
       </div>
     </div>
