@@ -655,7 +655,38 @@
           "duration": null
         }
       ]
+    },
+    {
+      "id": "11",
+      "title": "启动 24/7 全自动交易策略",
+      "status": "completed",
+      "createdAt": "2026-03-15T11:49:00+08:00",
+      "completedAt": "2026-03-15T11:50:00+08:00",
+      "steps": [
+        {
+          "type": "thinking",
+          "agent": "ukgorboss",
+          "content": "老板要 24 小时全自动交易。需要启动 strategy-auto 模式。",
+          "time": "11:49:00",
+          "duration": "0.2s"
+        },
+        {
+          "type": "tool",
+          "agent": "ukgorboss",
+          "tool": "exec",
+          "content": "nohup node index.mjs strategy-auto > /tmp/polymarket-auto.log 2>&1 &\nPID: 47002",
+          "time": "11:49:30",
+          "duration": "1.0s"
+        },
+        {
+          "type": "response",
+          "agent": "ukgorboss",
+          "content": "✅ 自动交易已启动\n• 单笔:  | 置信度: 0.05% | 过度自信: /bin/zsh.20\n• 日志: /tmp/polymarket-auto.log\n• 停止: kill 47002",
+          "time": "11:50:00",
+          "duration": null
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-03-15T11:37:00+08:00"
+  "updatedAt": "2026-03-15T11:51:00+08:00"
 }
