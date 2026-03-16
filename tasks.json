@@ -933,8 +933,14 @@
           "agent": "system"
         }
       ]
+    },
+    {
+      "id": 1773698413026,
+      "task": "BTC Scalp Sim Project",
+      "description": "Claude Code 负责搭建完整项目框架。Gemini 负责采集 Binance 数据并进行回测。",
+      "timestamp": "2026-03-16T22:00:13.026Z"
     }
   ],
   "latestSummary": "任务列表已恢复合并",
-  "lastUpdated": "2026-03-16T12:04:40.381Z"
+  "lastUpdated": "2026-03-16T22:00:13.026Z"
 }
