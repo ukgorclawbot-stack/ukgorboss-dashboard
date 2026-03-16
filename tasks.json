@@ -1,6 +1,6 @@
 {
-  "latestSummary": "2026年3月16日 - 修复了 cron 任务多次覆盖 tasks.json 的问题，恢复至版本控制所储存内容，添加 AI 漫剧项目及相关文档任务。",
-  "lastUpdated": "2026-03-16T12:00:00+08:00",
+  "latestSummary": "2026年3月16日 - 足球策略回测优化(50%胜率)，Seedance角色一致性测试，Edit工具风险警告，tasks.json结构修复",
+  "lastUpdated": "2026-03-16T19:12:00+08:00",
   "tasks": [
     {
       "task": "Gnosis Safe 签名修复",
@@ -37,6 +37,30 @@
       "description": "Seedance 2.0 API 集成完成",
       "status": "completed",
       "createdAt": "2026-03-16T10:00:45.635Z"
+    },
+    {
+      "task": "80分钟足球策略回测优化",
+      "description": "英超120场+欧冠150场回测，优化进球≥3+分差≤1条件，胜率50%，赔率3x以上正EV",
+      "status": "completed",
+      "createdAt": "2026-03-16T19:12:00+08:00"
+    },
+    {
+      "task": "AI漫剧Seedance角色一致性测试",
+      "description": "测试3种模式（文生视频/first_frame/reference），锁定seed=123确保角色一致",
+      "status": "completed",
+      "createdAt": "2026-03-16T19:12:00+08:00"
+    },
+    {
+      "task": "Edit工具通用风险警告",
+      "description": "发现session压缩后Edit频繁失败，MEMORY.md已更新通用替代规则",
+      "status": "completed",
+      "createdAt": "2026-03-16T19:12:00+08:00"
+    },
+    {
+      "task": "tasks.json结构修复",
+      "description": "修复cron脚本把tasks.json当纯数组的bug，结构是{tasks:[],latestSummary,lastUpdated}",
+      "status": "completed",
+      "createdAt": "2026-03-16T19:12:00+08:00"
     }
   ]
 }
