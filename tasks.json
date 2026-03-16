@@ -1,1 +1,21 @@
-{"latestSummary": "2026年3月16日 - 修复了 cron 任务多次覆盖 tasks.json 的问题，恢复至版本控制所储存内容，添加 AI 漫剧项目及相关文档任务。","lastUpdated": "2026-03-16T12:00:00+08:00"}]}
+{
+    "latestSummary": "2026年3月16日 - 修复了 cron 任务多次覆盖 tasks.json 的问题，恢复至版本控制所储存内容，添加 AI 漫剧项目及相关文档任务。",
+    "lastUpdated": "2026-03-16T12:00:00+08:00",
+    "tasks": [
+        {
+            "task":"Gnosis Safe 签名修复",
+            "description":"修复Gnosis Safe签名机制，确保安全性",
+            "timestamp":"2026-03-16T11:00:00+08:00"
+        },
+        {
+            "task":"redeem 修复",
+            "description":"优化 redeem 逻辑，解决余额不足问题",
+            "timestamp":"2026-03-16T11:30:00+08:00"
+        },
+        {
+            "task":"刷单策略启动",
+            "description":"启动刷单策略，持续监控市场",
+            "timestamp":"2026-03-16T11:45:00+08:00"
+        }
+    ]
+}
