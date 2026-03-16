@@ -3,67 +3,144 @@
   "lastUpdated": "2026-03-16T19:12:00+08:00",
   "tasks": [
     {
-      "task": "Gnosis Safe 签名修复",
       "description": "修复Gnosis Safe签名机制，确保安全性",
       "createdAt": "2026-03-16T11:00:00+08:00",
-      "status": "completed"
+      "status": "completed",
+      "id": 1773660415438,
+      "title": "Gnosis Safe 签名修复",
+      "steps": [
+        {
+          "type": "note",
+          "content": "修复Gnosis Safe签名机制，确保安全性",
+          "agent": "system"
+        }
+      ]
     },
     {
-      "task": "redeem 修复",
       "description": "优化 redeem 逻辑，解决余额不足问题",
       "createdAt": "2026-03-16T11:30:00+08:00",
-      "status": "completed"
+      "status": "completed",
+      "id": 1773660415439,
+      "title": "redeem 修复",
+      "steps": [
+        {
+          "type": "note",
+          "content": "优化 redeem 逻辑，解决余额不足问题",
+          "agent": "system"
+        }
+      ]
     },
     {
-      "task": "刷单策略启动",
       "description": "启动刷单策略，持续监控市场",
       "createdAt": "2026-03-16T11:45:00+08:00",
-      "status": "completed"
+      "status": "completed",
+      "id": 1773660415440,
+      "title": "刷单策略启动",
+      "steps": [
+        {
+          "type": "note",
+          "content": "启动刷单策略，持续监控市场",
+          "agent": "system"
+        }
+      ]
     },
     {
       "id": 1773655245635,
       "description": "恢复了被 cron 覆盖的 tasks.json。",
       "status": "completed",
       "createdAt": "2026-03-16T10:00:45.635Z",
-      "task": "恢复 tasks.json"
+      "title": "恢复 tasks.json",
+      "steps": [
+        {
+          "type": "note",
+          "content": "恢复了被 cron 覆盖的 tasks.json。",
+          "agent": "system"
+        }
+      ]
     },
     {
       "id": 1773655245636,
       "description": "新增3个任务: Gnosis Safe 签名修复、redeem 修复、刷单策略启动。",
       "status": "completed",
       "createdAt": "2026-03-16T10:00:45.635Z",
-      "task": "新增任务"
+      "title": "新增任务",
+      "steps": [
+        {
+          "type": "note",
+          "content": "新增3个任务: Gnosis Safe 签名修复、redeem 修复、刷单策略启动。",
+          "agent": "system"
+        }
+      ]
     },
     {
       "id": 1773655245637,
       "description": "Seedance 2.0 API 集成完成",
       "status": "completed",
       "createdAt": "2026-03-16T10:00:45.635Z",
-      "task": "Seedance 2.0 集成"
+      "title": "Seedance 2.0 集成",
+      "steps": [
+        {
+          "type": "note",
+          "content": "Seedance 2.0 API 集成完成",
+          "agent": "system"
+        }
+      ]
     },
     {
-      "task": "80分钟足球策略回测优化",
       "description": "英超120场+欧冠150场回测，优化进球≥3+分差≤1条件，胜率50%，赔率3x以上正EV",
       "status": "completed",
-      "createdAt": "2026-03-16T19:12:00+08:00"
+      "createdAt": "2026-03-16T19:12:00+08:00",
+      "id": 1773660415444,
+      "title": "80分钟足球策略回测优化",
+      "steps": [
+        {
+          "type": "note",
+          "content": "英超120场+欧冠150场回测，优化进球≥3+分差≤1条件，胜率50%，赔率3x以上正EV",
+          "agent": "system"
+        }
+      ]
     },
     {
-      "task": "AI漫剧Seedance角色一致性测试",
       "description": "测试3种模式（文生视频/first_frame/reference），锁定seed=123确保角色一致",
       "status": "completed",
-      "createdAt": "2026-03-16T19:12:00+08:00"
+      "createdAt": "2026-03-16T19:12:00+08:00",
+      "id": 1773660415445,
+      "title": "AI漫剧Seedance角色一致性测试",
+      "steps": [
+        {
+          "type": "note",
+          "content": "测试3种模式（文生视频/first_frame/reference），锁定seed=123确保角色一致",
+          "agent": "system"
+        }
+      ]
     },
     {
-      "task": "Edit工具通用风险警告",
       "description": "发现session压缩后Edit频繁失败，MEMORY.md已更新通用替代规则",
       "status": "completed",
-      "createdAt": "2026-03-16T19:12:00+08:00"
+      "createdAt": "2026-03-16T19:12:00+08:00",
+      "id": 1773660415446,
+      "title": "Edit工具通用风险警告",
+      "steps": [
+        {
+          "type": "note",
+          "content": "发现session压缩后Edit频繁失败，MEMORY.md已更新通用替代规则",
+          "agent": "system"
+        }
+      ]
     },
     {
-      "task": "tasks.json结构修复",
       "description": "修复cron脚本把tasks.json当纯数组的bug，结构是{tasks:[],latestSummary,lastUpdated}",
       "status": "completed",
-      "createdAt": "2026-03-16T19:12:00+08:00"
+      "createdAt": "2026-03-16T19:12:00+08:00",
+      "id": 1773660415447,
+      "title": "tasks.json结构修复",
+      "steps": [
+        {
+          "type": "note",
+          "content": "修复cron脚本把tasks.json当纯数组的bug，结构是{tasks:[],latestSummary,lastUpdated}",
+          "agent": "system"
+        }
+      ]
     }
   ]
 }
