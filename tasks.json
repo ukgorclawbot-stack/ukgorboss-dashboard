@@ -1218,8 +1218,26 @@
       "task": "重写 daily_crypto_report.py 9点晨报",
       "description": "固定9点晨报结构：X加密圈资讯 + GitHub Trending Top10 + Binance异动监测 + 市场摘要，读取binance-monitor/latest.json",
       "timestamp": "2026-03-22T22:00:38.955Z"
+    },
+    {
+      "id": 1774216974771,
+      "task": "Binance 异动监控脚本补齐",
+      "description": "完成 scripts/binance_monitor.py，支持全量 USDT 现货交易对扫描、--once 运行和持续轮询",
+      "timestamp": "2026-03-22T22:02:54.771Z"
+    },
+    {
+      "id": 1774216986005,
+      "task": "日报脚本重写",
+      "description": "重写 scripts/daily_crypto_report.py，改为固定 9 点晨报结构，含 X/Twitter 加密圈、GitHub Trending、Binance 异动监测",
+      "timestamp": "2026-03-22T22:03:06.005Z"
+    },
+    {
+      "id": 1774216992652,
+      "task": "Binance 异动监控 Cron 入口切换",
+      "description": "cron/jobs.json 入口切换为 scripts/binance_mover_watch.py --once --send，保留 5 分钟轮询",
+      "timestamp": "2026-03-22T22:03:12.652Z"
     }
   ],
   "latestSummary": "系统运行稳定 | OpenClaw工作区优化完成 | Agent验证通过 | 9点报告运行中",
-  "lastUpdated": "2026-03-22T22:00:38.955Z"
+  "lastUpdated": "2026-03-22T22:03:12.652Z"
 }
