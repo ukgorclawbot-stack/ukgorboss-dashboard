@@ -1206,8 +1206,20 @@
       "task": "📊 6小时仪表板自动更新",
       "description": "系统运行稳定 | OpenClaw工作区优化完成 | Agent调用验证通过 | 每日9点报告定时任务运行中 | 多workspace架构已归档",
       "timestamp": "2026-03-22T16:01:19.833Z"
+    },
+    {
+      "id": 1774216838952,
+      "task": "补齐 Binance 异动监控脚本",
+      "description": "scripts/binance_monitor.py，支持全量 USDT 现货交易对扫描、单次运行和持续轮询，--once 和 --send 参数",
+      "timestamp": "2026-03-22T22:00:38.952Z"
+    },
+    {
+      "id": 1774216838956,
+      "task": "重写 daily_crypto_report.py 9点晨报",
+      "description": "固定9点晨报结构：X加密圈资讯 + GitHub Trending Top10 + Binance异动监测 + 市场摘要，读取binance-monitor/latest.json",
+      "timestamp": "2026-03-22T22:00:38.955Z"
     }
   ],
   "latestSummary": "系统运行稳定 | OpenClaw工作区优化完成 | Agent验证通过 | 9点报告运行中",
-  "lastUpdated": "2026-03-22T16:01:19.834Z"
+  "lastUpdated": "2026-03-22T22:00:38.955Z"
 }
