@@ -1248,8 +1248,36 @@
       "task": "Binance 异动监控脚本补齐",
       "description": "补齐 binance_monitor.py，支持全量 USDT 现货交易对扫描、--once 运行和持续轮询，修复域名解析错误时的错误输出",
       "timestamp": "2026-03-23T04:02:32.742Z"
+    },
+    {
+      "id": "1774282253330-1",
+      "title": "Binance 合约 Futures API 适配器骨架",
+      "description": "补齐 scripts/binance_monitor.py 的 Futures 交易 API 适配器骨架，支持 bnapi 接入",
+      "status": "completed",
+      "timestamp": "2026-03-23T16:10:53.329Z"
+    },
+    {
+      "id": "1774282253330-2",
+      "title": "修复 Python dataclass 兼容性",
+      "description": "验证发现当前 Python 运行时不支持 dataclass(slots=True)，已改回普通 @dataclass",
+      "status": "completed",
+      "timestamp": "2026-03-23T16:10:53.329Z"
+    },
+    {
+      "id": "1774282253330-3",
+      "title": "空数据保护增强",
+      "description": "exchangeInfo/ticker 为空会直接报错，不再静默输出假正常",
+      "status": "completed",
+      "timestamp": "2026-03-23T16:10:53.329Z"
+    },
+    {
+      "id": "1774282253330-4",
+      "title": "新增当天异动币种告警",
+      "description": "报告里显式输出当天突然异动币种，JSON 里带 today_alert_symbols",
+      "status": "completed",
+      "timestamp": "2026-03-23T16:10:53.329Z"
     }
   ],
-  "latestSummary": "系统运行稳定 | OpenClaw工作区优化完成 | Agent验证通过 | 9点报告运行中",
-  "lastUpdated": "2026-03-23T04:02:32.744Z"
+  "latestSummary": "Binance 合约异动监控工具增强完成 | Futures API 适配器就绪 | 空数据保护修复",
+  "lastUpdated": "2026-03-23T16:10:53.329Z"
 }
