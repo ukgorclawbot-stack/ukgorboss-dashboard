@@ -1242,8 +1242,14 @@
       "task": "📊 6小时仪表板自动更新",
       "description": "系统运行稳定 | Binance监控脚本已更新 | 日报脚本已重写 | Cron入口已调整",
       "timestamp": "2026-03-23T04:01:34.977Z"
+    },
+    {
+      "id": 1774238552742,
+      "task": "Binance 异动监控脚本补齐",
+      "description": "补齐 binance_monitor.py，支持全量 USDT 现货交易对扫描、--once 运行和持续轮询，修复域名解析错误时的错误输出",
+      "timestamp": "2026-03-23T04:02:32.742Z"
     }
   ],
   "latestSummary": "系统运行稳定 | OpenClaw工作区优化完成 | Agent验证通过 | 9点报告运行中",
-  "lastUpdated": "2026-03-23T04:01:34.977Z"
+  "lastUpdated": "2026-03-23T04:02:32.744Z"
 }
